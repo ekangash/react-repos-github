@@ -1,0 +1,48 @@
+
+
+.search {
+  display: flex;
+  margin: 10px 0;
+
+
+  &-input {
+    padding: 5px;
+    width: 100%;
+  }
+
+  &-btn {
+    padding: 5px;
+  }
+}
+
+
+.fetching {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 30vh auto;
+  border: 2px dashed red;
+  //подключение анимации.
+  animation-name: search-fetching;
+  // время анимации для одной итерации
+  animation-duration: 2s;
+  //бесконечное количество итераций
+  animation-iteration-count: infinite;
+  // Что бы анимация доходила до конца и возвращаласьобратно, а не сбрасывалась
+  animation-direction: alternate;
+  // Для того что-бы скорость выполнения анимации во всех промежутках было одинаковой
+  // нужно сделать функциию времени - линейной
+  animation-timing-function: linear;
+}
+
+
+@keyframes search-fetching {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1.5);
+  }
+
+}
