@@ -1,5 +1,7 @@
 
-export function createPages(pages, pagesCount, currentPage) {
+export function createPages(pagesCount, currentPage) {
+    let pages = [];
+
     if(pagesCount > 10) {
         if(currentPage > 5) {
             for (let i = currentPage-4; i <= currentPage+5; i++) {
@@ -18,4 +20,6 @@ export function createPages(pages, pagesCount, currentPage) {
             pages.push(i)
         }
     }
+
+    return pages;
 }
