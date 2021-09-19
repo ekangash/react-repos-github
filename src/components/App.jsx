@@ -1,14 +1,19 @@
 import React from 'react';
 import './app.less';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import Main from "./main/Main";
+import Card from "./card/Card";
 
 //Switch позволяет выбрать первый попавшися емму маршут и обработать, без switch роутер может обработать множжество роутеров,
 // которые удовлитворяют условию.
 const App = () => {
     return (
         <BrowserRouter>
-             <Route path="/" component={Main}/>
+            <Switch>
+                <Route exact path="/" component={Main}/>
+                <Route path="/card" component={Card} />
+                <Redirect to="/" />
+            </Switch>
         </BrowserRouter>
     )
 }

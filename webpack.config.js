@@ -13,6 +13,7 @@ module.exports = {
     },
     devServer: {
         port: 3000,
+        // Что бы у дэв сервера небыло никаких проблем с API Browser. Что такое API Browser?
         historyApiFallback: true
     },
     // Настройка используемых плагинов
