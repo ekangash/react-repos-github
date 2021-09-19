@@ -10,8 +10,8 @@ const App = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={Main}/>
-                <Route path="/card" component={Card} />
+                <Route exact path="/" component={Main} />
+                <Route path="/card/:username/:reponame" component={Card} />
                 <Redirect to="/" />
             </Switch>
         </BrowserRouter>

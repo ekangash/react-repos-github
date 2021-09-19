@@ -19,8 +19,6 @@ export default function Main() {
     // Хук состояний, который параметром (аргументом) принимает дефолтноезначение переменной.
     const [searchValue, setSearchValue] = useState();
     const pagesCount = Math.ceil(totalCount/perPage);
-    console.log('pagesCount', pagesCount)
-    console.log('totalCount', totalCount)
     const pages = createPages(pagesCount, currentPage);
 
     // Добавиви currentPage в массив зависимостей
@@ -52,7 +50,6 @@ export default function Main() {
                     </span>
                 ) }
             </div>
-
         </div>
     )
 }
