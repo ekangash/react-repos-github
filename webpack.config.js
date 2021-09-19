@@ -9,10 +9,14 @@ module.exports = {
     // Хранилище куда складываются собранные файлы.
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "[name].[hash].js"
+        filename: "[name].[hash].js",
+        // Что бы не возникало никакких проблем с хэшированием пи переходе на разные страницы
+        publicPath: "/"
     },
     devServer: {
-        port: 3000
+        port: 3000,
+        // Что бы у дэв сервера небыло никаких проблем с API Browser. Что такое API Browser?
+        historyApiFallback: true
     },
     // Настройка используемых плагинов
     plugins: [
