@@ -2,7 +2,7 @@ import axios from 'axios';
 import {setFetchError, setIsFetching, setRepos} from "../../reducers/reposReducer";
 
 // Функции нужноименовать, тематически правильно, что-бы было понятно что они выполняют.
-// Библиотека axios построена на promis промисах, то можно использовать async await
+// Библиотека axios построена на promis промисах, следовательно можно использовать async await
 // Тут используется хранилеще редакс.
 export const getRepos = (searchQuery = "stars:%3E1", currentPage, perPage) => {
     return async (dispatch) => {
